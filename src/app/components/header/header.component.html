@@ -1,6 +1,13 @@
 <header>
     <h1>{{title}}</h1>
-    <app-button (click)="toggleAddTask()" 
-    setClass="{{showAddTask ? 'btn btn-primary' : 'btn btn-alert'}}" 
-    text="{{showAddTask ? 'Add Task' : 'Close'}}"></app-button>
+    <app-button 
+    *ngIf="hasRoute('/')"
+    (click)="toggleAddTask()" 
+    setClass="{{showAddTask ? 'btn btn-alert' : 'btn btn-success'}}" 
+    text="{{showAddTask ? 'Close' : 'Add Task'}}"></app-button>
 </header>
+<nav class="container">
+    <a routerLink="./" routerLinkActive="active">Home</a>
+    <a routerLink="./about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+        true}" >About This App</a>
+</nav>

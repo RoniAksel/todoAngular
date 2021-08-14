@@ -4,3 +4,37 @@ header{
     align-items: center;
     margin-bottom: var(--space);
 }
+
+nav{
+    background-color: var(--cc-border);
+    border-radius: 10px;
+    
+}
+
+a{
+    margin-left: var(--space);
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-weight: 500;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: var(--fc-primary);
+  }
+
+  a:active{
+      color:white;
+  }
+
+  .active{
+    color: var(--fc-primary);
+    font-weight: 600;
+    border-bottom: 3px solid var(--fc-primary);
+  }
+  
