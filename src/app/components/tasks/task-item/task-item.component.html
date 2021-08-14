@@ -1,0 +1,12 @@
+<div class="container border">
+    <div class="flex" style="justify-content: space-between;">
+        <h4>Task ID: {{task.id}}</h4>
+        <h4><fa-icon (click)="onDelete(task)" [ngStyle]="{color:'red', marginLeft:'1rem'}" [icon]="faTimes"></fa-icon></h4>
+    </div>
+    <div>
+        <h3>{{task.title}}</h3>
+        <hr>
+        <h5>Description</h5>
+        <p>{{task.body}}</p>
+    </div>
+</div>

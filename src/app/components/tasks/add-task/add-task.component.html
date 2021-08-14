@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="title">Task Title</label>
+        <input type="text" name="title" id="title" placeholder="Add New Task" [(ngModel)]="title">
+    </div>
+    <div class="form-control">
+        <label for="body">Description</label>
+        <textarea   rows="4" type="text" name="body" id="body" placeholder="Add Description" [(ngModel)]="body"></textarea>
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-primary">
+</form>
