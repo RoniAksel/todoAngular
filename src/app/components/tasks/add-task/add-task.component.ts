@@ -1,5 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task';
+import { UiService } from 'src/app/services/ui.service';
+
+
 
 @Component({
   selector: 'app-add-task',
@@ -18,10 +21,10 @@ export class AddTaskComponent implements OnInit {
 
   onSubmit() {
     if (!this.title) {
-      this.error
+      return console.log(this.error); 
     }
     if (!this.body) {
-      this.error
+      return console.log(this.error); 
     }
     const newTask = {
       title: this.title,

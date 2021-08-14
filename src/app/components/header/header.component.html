@@ -1,4 +1,6 @@
 <header>
     <h1>{{title}}</h1>
-    <app-button text="Add Todo"></app-button>
+    <app-button (click)="toggleAddTask()" 
+    setClass="{{showAddTask ? 'btn btn-primary' : 'btn btn-alert'}}" 
+    text="{{showAddTask ? 'Add Task' : 'Close'}}"></app-button>
 </header>
